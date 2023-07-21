@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <section class="salutation">
+    <h2 class="title">
+      what's up, <input type="text" class="name">
+    </h2>
+  </section>
+  <div class="notification-container">
+    <p class="notice"></p>
+  </div>
+  <section class="create-todo">
+    <h3>Create a TODO</h3>
+    <form id="todo-form">
+      <h4>What's on your todo</h4>
+      <input type="text" class="content" name="content" placeholder="toDo">
+      <input type="hidden"  class="timeCreatedOn" name="time">
+
+      <h4>pick a catogery</h4>
+      <div class="options">
+        <label>
+          <input type="radio" name="category" id="category1" value="business" /> 
+				  <span class="bubble business"></span>
+			    <div>Business</div>
+        </label>
+        <label>
+          <input type="radio" name="category" id="category2" value="personal" /> 
+				  <span class="bubble personal"></span>
+				  <div>personal</div>
+        </label>
+        </div>
+
+      <input type="submit" class="submit null" name="submit"  value="Add to do" />
+    </form>
+  </section>
+
+  <!-- Todo List -->
+<!-- Todo List -->
+<section class="paginated-list">
+  <h3>TODO LIST</h3>
+  <div class="list" id="paginated-list" aria-live="polite">
+
+  </div>
+  <nav class="pagination-container">
+    <button class="pagination-button" id="prev-button" title="Previous page" aria-label="Previous page">
+      &lt;
+    </button>
+    
+    <div id="pagination-numbers">
+    </div>
+    
+    <button class="pagination-button" id="next-button" title="Next page" aria-label="Next page">
+      &gt;
+    </button>
+  </nav>
+</section>
+<!-- End of Todo List -->
+
+  <script src="main.js"></script>
+</body>
+</html>
